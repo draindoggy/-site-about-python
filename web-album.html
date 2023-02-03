@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>веб-альбом</title>
+    <style>
+
+      * {
+      box-sizing: border-box;
+      }
+      .slider {
+      width: 900px;
+      text-align: center;
+      overflow: hidden;
+      }
+      .slides {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      }
+      .slides::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      }
+      .slides::-webkit-scrollbar-thumb {
+      background: #666;
+      border-radius: 10px;
+      }
+      .slides::-webkit-scrollbar-track {
+      background: transparent;
+      }
+      .slides > div {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 900px;
+      height: 600px;
+      margin-right: 200px;
+      border-radius: 10px;
+      background: #eee;
+      transform-origin: center center;
+      transform: scale(1);
+      transition: transform 0.20s;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      }
+      .slider > a {
+      display: inline-flex;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: white;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 0 0.5rem 0;
+      position: relative;
+      }
+      .slider > a:active {
+      top: 1px;
+      color: #1c87c9;
+      }
+      .slider > a:focus {
+      background: #eee;
+      }
+      /* Навигационной кнопки не требуется  */
+      @supports (scroll-snap-type) {
+      .slider > a {
+      display: none;
+      }
+      }
+      html, body {
+      height: 100%;
+      overflow: hidden;
+      }
+      body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #DEB887,#F5DEB3);
+      font-family: 'Ropa Sans', sans-serif;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <a href="#slide-1">1</a>
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-4">4</a>
+      <a href="#slide-5">5</a>
+	  <a href="#slide-6">6</a>
+      <a href="#slide-7">7</a>
+      <a href="#slide-8">8</a>
+      <a href="#slide-9">9</a>
+      <a href="#slide-10">10</a>
+	  <a href="#slide-11">11</a>
+	  <a href="#slide-12">12</a>
+      <div class="slides" style="border:10px #CD853F  solid; width:1400;">
+	  <div id="slide-1"><img src="https://sun9-64.userapi.com/impg/jQb_XCu2xEwxiVSZUzawthP3yr4ww_7-4sXCPw/09MyJFrcvdc.jpg?size=1280x808&quality=95&sign=166790abf91ab781386a22dfce8cd6d8&c_uniq_tag=nRvrvK-C0ssqsCJinGUf7-wrmwLTWA2lvDZU8LBpd0c&type=album" width="900" height="600"></div>
+	  <div id="slide-2"><img src="https://cf3.ppt-online.org/files3/slide/z/ZTicKN18bXJrGxyHlMSEhVU74nkmgOqeRFW6YB/slide-4.jpg"width="950" height="600"></div>
+	  <div id="slide-3"><img src="https://host-base.ru/wp-content/uploads/d/1/9/d19e1f0003c9cacefff0522e7de4290b.jpeg" width="950" height="600"></div>
+	  <div id="slide-4"><img src="https://theslide.ru/img/tmb/7/607575/d6cbfc5b6e1e6e2c7d1eb400ac4930e9-800x.jpg" width="950" height="600"></div>
+	  <div id="slide-5"><img src="https://itproger.com/img/news/1618785231.jpg" width="990" height="600"></div>
+	  <div id="slide-6"><img src="https://eternalhost.net/wp-content/uploads/2022/01/Python-illustration-2.png" width="950" height="600"></div>
+      <div id="slide-7"><img src="https://host-base.ru/wp-content/uploads/5/a/b/5abd70b0efb46161424fd03c7d5306c2.jpeg" width="900" height="603"></div>
+      <div id="slide-8"><img src="https://shareslide.ru/img/thumbs/4e1b72179d46124136f820bd5b205a43-800x.jpg" width="900" height="603"></div>
+      <div id="slide-9"><img src="https://cf3.ppt-online.org/files3/slide/x/XcloVDU94vMK8hTa65BSWPn0OQb71CigeHGdxN/slide-6.jpg"width="900" height="603"></div>
+      <div id="slide-10"><img src="http://cobweb.cs.uga.edu/~maria/classes/4500-Spring-2012/figs/pythonLogoSmall.png"width="750" height="600"></div>
+	  <div id="slide-11"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Python_Macintosh_icon_1995%E2%80%931997.png"width="250" height="250"></div>
+	  <div id="slide-12"><img src="https://www.twine.net/blog/wordpress/wp-content/uploads/2022/07/pythonlogo.png" width="550" height="350"></div>
+	  </div>
+    </div>
+  </body>
+</html>
